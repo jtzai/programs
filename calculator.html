@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jzai's Programs</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: rgb(81, 81, 170); /* background */
+      color: rgb(0, 0, 0); /* text color so it shows up on dark background */
+      margin: 0;
+      padding: 20px;
+    }
+
+h2 {
+  font-size: 2em;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+}
+
+p {
+  font-size: 1.5em;
+  color: #000000;
+  text-shadow: 0 0 10px #cf0c0c, 0 0 20px #ff00ff;
+}
+a[href="https://jtzai.github.io/html/devteam.html"] {
+  color: #2ecafa;
+  font-weight: bold;
+}
+
+a[href="https://jtzai.github.io/html/devteam.html"]:hover {
+  color: #7807db;
+}
+input[type="number"] {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(to right, #0015ff, #a302e8);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+
+  </style>
+</head>
+<body>
+
+<h1>Programs</h1>
+<p>This is an exercise in rewriting my C++ programs in Javascript</p>
+
+<h2> Add Two Numbers</h2>
+<p> <input type = "number" id="num1" placeholder = "Enter first number">
+<p> <input type = "number" id="num2" placeholder = "Enter second number">
+<button onclick="calculateSum()">Calculate Sum</button>
+<p>Result: <span id="result"></span></p>
+
+<h2>Multiply Two Numbers</h2>
+<p> <input type ="number" id="pnum1" placeholder ="Enter first number">
+<p> <input type ="number" id="pnum2" placeholder ="Enter second number">
+<button onclick="calculateProduct()">Calculate Product</button>
+<p>Result: <span id="presult"></span></p>
+
+<h2>Subtract Two Numbers</h2>
+<p> <input type ="number" id="dnum1" placeholder ="Enter first number">
+<p> <input type ="number" id="dnum2" placeholder ="Enter second number">
+<button onclick="calculateSubtract()">Calculate Difference</button>
+<p>Result: <span id="dresult"></span></p>
+
+<h2>Divide Two Numbers</h2>
+<p> <input type ="number" id="qnum1" placeholder ="Enter first number">
+<p> <input type ="number" id="qnum2" placeholder ="Enter second number">
+<button onclick="calculateQuotient()">Calculate Quotient</button>
+<p>Result: <span id="qresult"></span></p>
+
+<h2>Even Or Odd</h2>
+<p> <input type = "number" id="number" placeholder = "Enter number">
+<button onclick="calculateEvenorOdd()">Show if Number is Even or Odd</button>
+<p>Result: <span id="numberresult"></span></p>
+
+  <p> <a href="https://jtzai.github.io/html/devteam.html">-    About Me</a> <br>
+
+<script>
+	function calculateSum() {
+	let num1 =
+parseFloat(document.getElementById('num1').value);
+	let num2 =
+parseFloat(document.getElementById('num2').value);
+	let sum = num1 + num2;
+	
+	document.getElementById('result').textContent = sum;
+	}
+	
+	function calculateProduct() {
+	let pnum1 = parseFloat(document.getElementById('pnum1').value);
+	let pnum2 = parseFloat(document.getElementById('pnum2').value);
+	let product = pnum1 * pnum2;
+	
+	document.getElementById('presult').textContent = product;
+	}
+	
+	function calculateSubtract() {
+	let dnum1 = parseFloat(document.getElementById('dnum1').value);
+	let dnum2 = parseFloat(document.getElementById('dnum2').value);
+	let difference = dnum1 - dnum2;
+	
+	document.getElementById('dresult').textContent = difference;
+	}
+	
+	function calculateQuotient() {
+	let qnum1 = parseFloat(document.getElementById('qnum1').value);
+	let qnum2 = parseFloat(document.getElementById('qnum2').value);
+	let difference = qnum1 / qnum2;
+	
+	document.getElementById('qresult').textContent = difference;
+	}
+
+	function calculateEvenorOdd() {
+	let number = parseFloat(document.getElementById('number').value);
+  if (isNaN(number)) {
+    document.getElementById('numberresult').textContent = "Please enter a valid number.";
+    return;
+  }
+
+  if (number % 2 === 0) {
+    document.getElementById('numberresult').textContent = number + " is Even";
+  } else {
+    document.getElementById('numberresult').textContent = number + " is Odd";
+  }
+}
+
+	
+
+	
+</script>
+</body>
+</html>
